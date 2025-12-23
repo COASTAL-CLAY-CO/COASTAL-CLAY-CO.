@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastal Clay Co. - Handcrafted Beach Jewelry & Stickers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blush-bay: #F4D4D4;
+            --seabreeze: #C9E4E7;
+            --sand: #F5EBE0;
+            --driftwood: #9C8577;
+            --ocean: #8DB4C7;
+            --sunset: #E8B4A8;
+            --cream: #FFFCF9;
+            --charcoal: #4A4A4A;
+            --soft-mint: #D4E8E0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 252, 249, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 3rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(156, 133, 119, 0.1);
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--driftwood);
+            letter-spacing: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--ocean);
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .donate-link {
+            color: var(--driftwood);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.6rem 1.5rem;
+            border: 1.5px solid var(--driftwood);
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .donate-link:hover {
+            background: var(--driftwood);
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 70vh;
+            background: linear-gradient(135deg, var(--seabreeze) 0%, var(--blush-bay) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+        
+        .cta-button {
+            background: white;
+            color: var(--driftwood);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--driftwood);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            font-weight: 300;
+        }
+        
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .gift-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.95);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--driftwood);
+        }
+        
+        .product-info {
+            padding: 2rem;
+        }
+        
+        .product-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--driftwood);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-description {
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .price {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--driftwood);
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn-primary {
+            flex: 1;
+            background: var(--ocean);
+            color: white;
+            padding: 0.9rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background: #7BA4B6;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--driftwood);
+            padding: 0.9rem 1.5rem;
+            border: 1.5px solid var(--driftwood);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--driftwood);
+            color: white;
+        }
+        
+        /* Custom Builder Section */
+        .builder-section {
+            background: linear-gradient(135deg, var(--sand) 0%, var(--blush-bay) 100%);
+            padding: 5rem 3rem;
+            margin: 0 -3rem;
+        }
+        
+        .builder-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+        }
+        
+        .builder-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--sand);
+        }
+        
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: none;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--charcoal);
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        .tab-btn.active {
+            color: var(--ocean);
+        }
+        
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--ocean);
+        }
+        
+        .builder-content {
+            display: none;
+        }
+        
+        .builder-content.active {
+            display: block;
+        }
+        
+        /* Bracelet Builder */
+        .builder-preview {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--sand) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            min-height: 200px;
+            text-align: center;
+        }
+        
+        .bracelet-string {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .clay-bead {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 2px 8px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        
+        .clay-bead::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30%;
+            height: 15%;
+            background: rgba(255,255,255,0.4);
+            border-radius: 50%;
+            filter: blur(2px);
+        }
+        
+        .clay-bead:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .bead-options-container {
+            margin-bottom: 3rem;
+        }
+        
+        .option-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--driftwood);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .bead-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .bead-sample {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 2px 8px rgba(0,0,0,0.15);
+            border: 3px solid white;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .bead-sample::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 35%;
+            height: 18%;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            filter: blur(3px);
+        }
+        
+        .bead-sample:hover {
+            transform: scale(1.15);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 4px 15px rgba(0,0,0,0.25);
+        }
+        
+        .letter-input-section, .charm-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .letter-input-section input {
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--sand);
+            border-radius: 10px;
+            font-size: 1.1rem;
+            width: 200px;
+            margin-right: 1rem;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        
+        .charm-options {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .charm-btn {
+            width: 60px;
+            height: 60px;
+            background: var(--sand);
+            border: none;
+            border-radius: 12px;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .charm-btn:hover {
+            background: var(--blush-bay);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* Sticker Builder */
+        .sticker-canvas {
+            background: white;
+            border: 2px solid var(--sand);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 500px;
+            height: 500px;
+            margin: 0 auto 2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .sticker-element {
+            position: absolute;
+            cursor: move;
+            font-size: 3rem;
+            user-select: none;
+        }
+        
+        .sticker-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+        
+        .upload-section {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: var(--sand);
+            border-radius: 12px;
+        }
+        
+        .upload-label {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            border: 2px dashed var(--driftwood);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .upload-label:hover {
+            background: var(--cream);
+            border-color: var(--ocean);
+        }
+        
+        .upload-label input {
+            display: none;
+        }
+        
+        .uploaded-image {
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
+            cursor: move;
+        }
+        
+        /* Gift Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+        }
+        
+        .modal h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--driftwood);
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--sand);
+            border-radius: 8px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        /* Game Section */
+        .game-reveal {
+            text-align: center;
+            margin: 5rem 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--seabreeze) 0%, var(--ocean) 100%);
+            border-radius: 16px;
+        }
+        
+        .game-reveal h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .game-reveal p {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .game-container {
+            display: none;
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .game-container.active {
+            display: block;
+        }
+        
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        
+        .game-card {
+            aspect-ratio: 1;
+            background: var(--sand);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        
+        .game-card.flipped {
+            transform: rotateY(180deg);
+        }
+        
+        .game-card.matched {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+        
+        .card-front {
+            background: white;
+            transform: rotateY(180deg);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card-back {
+            background: linear-gradient(135deg, var(--seabreeze), var(--ocean));
+            color: white;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+        }
+        
+        .game-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Donation Section */
+        .donation-section {
+            background: linear-gradient(135deg, var(--sunset) 0%, var(--blush-bay) 100%);
+            padding: 5rem 3rem;
+            margin: 5rem -3rem 0;
+            text-align: center;
+        }
+        
+        .donation-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .donation-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .donation-content p {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+        
+        .donation-amounts {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .amount-option {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .amount-option:hover, .amount-option.selected {
+            background: white;
+            color: var(--sunset);
+        }
+        
+        .custom-donation-input {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .custom-donation-input input {
+            padding: 1rem 1.5rem;
+            border: 2px solid white;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.3);
+            color: white;
+            font-size: 1.1rem;
+            width: 200px;
+        }
+        
+        .custom-donation-input input::placeholder {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        /* Cart */
+        .cart-summary {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+            min-width: 320px;
+            display: none;
+            z-index: 1500;
+        }
+        
+        .cart-summary.active {
+            display: block;
+        }
+        
+        .cart-header {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--driftwood);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--sand);
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--sand);
+        }
+        
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--driftwood);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--sand);
+            padding: 4rem 3rem 2rem;
+            margin-top: 5rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-content p {
+            margin: 0.5rem 0;
+            color: var(--charcoal);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            main {
+                padding: 2rem 1.5rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .builder-section {
+                padding: 3rem 1.5rem;
+                margin: 0 -1.5rem;
+            }
+            
+            .cart-summary {
+                bottom: 1rem;
+                right: 1rem;
+                left: 1rem;
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">COASTAL CLAY CO.</div>
+            <ul class="nav-links">
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#custom">Custom</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="header-actions">
+                <a href="#donate" class="donate-link">Support My Journey</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Handcrafted Beach Jewelry</h1>
+            <p>Every piece tells a story, inspired by windswept walks along Rehoboth Beach</p>
+            <a href="#shop" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="shop">
+            <div class="section-header">
+                <h2>Signature Collection</h2>
+                <p>Shot in cozy hoodies with ocean breezes on Delaware and Maryland beaches</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, rgba(232, 180, 168, 0.4), rgba(244, 212, 212, 0.4)), 
+                        url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22><rect fill=%22%23E8B4A8%22 width=%22800%22 height=%22600%22/><text x=%2250%25%22 y=%2230%25%22 font-family=%22serif%22 font-size=%2218%22 fill=%22%23fff%22 text-anchor=%22middle%22>Model in cozy sunset hoodie</text><text x=%2250%25%22 y=%2242%25%22 font-family=%22serif%22 font-size=%2232%22 fill=%22%23fff%22 text-anchor=%22middle%22>Sunset Dreams</text><text x=%2250%25%22 y=%2252%25%22 font-family=%22serif%22 font-size=%2218%22 fill=%22%23fff%22 text-anchor=%22middle%22>Wind-blown hair</text><text x=%2250%25%22 y=%2262%25%22 font-family=%22serif%22 font-size=%2218%22 fill=%22%23fff%22 text-anchor=%22middle%22>at Rehoboth Beach</text></svg>') center/cover;">
+                        <div class="gift-badge">🎁 Gift Option Available</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Sunset Dreams</h3>
+                        <p class="product-description">Warm peachy clay beads with rose gold accents, photographed at sunset in a cozy hoodie on Rehoboth Beach's windswept shore.</p>
+                        <div class="price-row">
+                            <span class="price">$18</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-primary" onclick="addToCart('Sunset Dreams', 18, false)">Add to Cart</button>
+                            <button class="btn-secondary" onclick="openGiftModal('Sunset Dreams', 18)">🎁 Gift</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, rgba(168, 216, 234, 0.5), rgba(201, 228, 231, 0.4)), 
+                        url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22><rect fill=%22%238DB4C7%22 width=%22800%22 height=%22600%22/><text x=%2250%25%22 y=%2230%25%22 font-family=%22serif%22 font-size=%2218%22 fill=%22%23fff%22 text-anchor=%22middle%22>Ocean breeze hoodie</text><text x=%2250%25%22 y=%2242%25%22 font-family=%22serif%22 font-size=%2232%22 fill=%22%23fff%22 text-anchor=%22middle%22>Ocean Breeze</text><text x=%2250%25%22 y=%2252%25%22 font-family=%22serif%22 font-size=%2218%22 fill=%22%23fff%22 text-anchor=%22middle%22>Morning light</text><text x=%2250%25%22 y=%2262%25%22 font-family=%22serif%22 font-size=%2218%22 fill=%22%23fff%22 text-anchor=%22middle%22>Ocean City, MD</text></svg>') center/cover;">
+                        <div class="gift-badge">🎁 Gift Option Available</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Ocean Breeze</h3>
+                        <p class="product-description">Cool blue and seafoam clay beads with shell charms, captured at sunrise in a soft blue hoodie on Ocean City's shore.</p>
+                        <div class="price-row">
+                            <span class="price">$20</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-primary" onclick="addToCart('Ocean Breeze', 20, false)">Add to Cart</button>
+                            <button class="btn-secondary" onclick="openGiftModal('Ocean Breeze', 20)">🎁 Gift</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, rgba(244, 212, 212, 0.4), rgba(212, 181, 247, 0.3)), 
+                        url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22><rect fill=%22%23F4D4D4%22 width=%22800%22 height=%22600%22/><text x=%2250%25%22 y=%2230%25%22 font-family=%22serif%22 font-size=%2218%22 fill=%22%23fff%22 text-anchor=%22middle%22>Blush pink hoodie</text><text x=%2250%25%22 y=%2242%25%22 font-family=%22serif%22 font-size=%2232%22 fill=%22%23fff%22 text-anchor=%22middle%22>Blush Coast</text><text x=%2250%25%22 y=%2252%25%22 font-family=%22serif%22 font-size=%2218%22 fill=%22%23fff%22 text-anchor=%22middle%22>Golden hour wind</text><text x=%2250%25%22 y=%2262%25%22 font-family=%22serif%22 font-size=%2218%22 fill=%22%23fff%22 text-anchor=%22middle%22>Rehoboth Boardwalk</text></svg>') center/cover;">
+                        <div class="gift-badge">🎁 Gift Option Available</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Blush Coast</h3>
+                        <p class="product-description">Soft pink and lavender clay beads with butterfly charms, shot in a blush hoodie near the Rehoboth Boardwalk at golden hour.</p>
+                        <div class="price-row">
+                            <span class="price">$19</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-primary" onclick="addToCart('Blush Coast', 19, false)">Add to Cart</button>
+                            <button class="btn-secondary" onclick="openGiftModal('Blush Coast', 19)">🎁 Gift</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, rgba(245, 235, 224, 0.6), rgba(201, 228, 231, 0.5)), 
+                        url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22><rect fill=%22%23F5EBE0%22 width=%22800%22 height=%22600%22/><circle cx=%22200%22 cy=%22200%22 r=%2260%22 fill=%22%23C9E4E7%22 opacity=%220.5%22/><circle cx=%22600%22 cy=%22200%22 r=%2260%22 fill=%22%23E8B4A8%22 opacity=%220.5%22/><circle cx=%22200%22 cy=%22400%22 r=%2260%22 fill=%22%23F4D4D4%22 opacity=%220.5%22/><circle cx=%22600%22 cy=%22400%22 r=%2260%22 fill=%22%23D4E8E0%22 opacity=%220.5%22/><text x=%2250%25%22 y=%2245%25%22 font-family=%22serif%22 font-size=%2232%22 fill=%22%239C8577%22 text-anchor=%22middle%22>Beach Clay</text><text x=%2250%25%22 y=%2255%25%22 font-family=%22serif%22 font-size=%2224%22 fill=%22%239C8577%22 text-anchor=%22middle%22>Sticker Set</text></svg>') center/cover;">
+                        <div class="gift-badge">🎁 Gift Option Available</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Beach Clay Sticker Set</h3>
+                        <p class="product-description">8 waterproof vinyl stickers in our signature coastal colors - clay beads, seashells, waves, and soft beach quotes.</p>
+                        <div class="price-row">
+                            <span class="price">$12</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-primary" onclick="addToCart('Beach Clay Sticker Set', 12, false)">Add to Cart</button>
+                            <button class="btn-secondary" onclick="openGiftModal('Beach Clay Sticker Set', 12)">🎁 Gift</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="custom" class="builder-section">
+            <div class="builder-container">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h2>Design Your Own</h2>
+                    <p>Create a truly unique piece that reflects your personal style</p>
+                </div>
+
+                <div class="builder-tabs">
+                    <button class="tab-btn active" onclick="switchBuilderTab('bracelet')">Bracelet Builder</button>
+                    <button class="tab-btn" onclick="switchBuilderTab('sticker')">Sticker Designer</button>
+                </div>
+
+                <!-- Bracelet Builder -->
+                <div id="bracelet-builder" class="builder-content active">
+                    <div class="builder-preview">
+                        <div class="bracelet-string" id="bracelet-display">
+                            <p style="color: #999;">Select clay beads below to begin designing</p>
+                        </div>
+                    </div>
+
+                    <div class="bead-options-container">
+                        <p class="option-label">Choose Your Clay Beads</p>
+                        <div class="bead-palette">
+                            <div class="bead-sample" style="background: linear-gradient(145deg, #F4D4D4, #E8C4C4);" onclick="addClayBead('#F4D4D4')"></div>
+                            <div class="bead-sample" style="background: linear-gradient(145deg, #C9E4E7, #B3D4D7);" onclick="addClayBead('#C9E4E7')"></div>
+                            <div class="bead-sample" style="background: linear-gradient(145deg, #D4E8E0, #BED8D0);" onclick="addClayBead('#D4E8E0')"></div>
+                            <div class="bead-sample" style="background: linear-gradient(145deg, #E8B4A8, #D8A498);" onclick="addClayBead('#E8B4A8')"></div>
+                            <div class="bead-sample" style="background: linear-gradient(145deg, #F5EBE0, #E5DBD0);" onclick="addClayBead('#F5EBE0')"></div>
+                            <div class="bead-sample" style="background: linear-gradient(145deg, #FFFCF9, #F5F2E9);" onclick="addClayBead('#FFFCF9')"></div>
+                            <div class="bead-sample" style="background: linear-gradient(145deg, #9C8577, #8C7567);" onclick="addClayBead('#9C8577')"></div>
+                            <div class="bead-sample" style="background: linear-gradient(145deg, #8DB4C7, #7DA4B7);" onclick="addClayBead('#8DB4C7')"></div>
+                        </div>
+                    </div>
+
+                    <div class="letter-input-section">
+                        <p class="option-label">Add Letter Beads</p>
+                        <input type="text" id="letter-bead-input" placeholder="Type a letter..." maxlength="1">
+                        <button class="btn-primary" onclick="addLetterClayBead()" style="padding: 1rem 2rem;">Add Letter</button>
+                    </div>
+
+                    <div class="charm-section">
+                        <p class="option-label">Add Charms</p>
+                        <div class="charm-options">
+                            <button class="charm-btn" onclick="addClayBead('transparent', '⭐')">⭐</button>
+                            <button class="charm-btn" onclick="addClayBead('transparent', '🦋')">🦋</button>
+                            <button class="charm-btn" onclick="addClayBead('transparent', '🐚')">🐚</button>
+                            <button class="charm-btn" onclick="addClayBead('transparent', '🌸')">🌸</button>
+                            <button class="charm-btn" onclick="addClayBead('transparent', '💎')">💎</button>
+                            <button class="charm-btn" onclick="addClayBead('transparent', '🌊')">🌊</button>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center;">
+                        <button class="btn-secondary" onclick="clearBraceletBuilder()">Clear Design</button>
+                        <button class="btn-primary" onclick="saveBraceletDesign()" style="padding: 1rem 3rem;">Save & Add to Cart ($15)</button>
+                    </div>
+                </div>
+
+                <!-- Sticker Builder -->
+                <div id="sticker-builder" class="builder-content">
+                    <div class="sticker-canvas" id="sticker-canvas">
+                        <p style="color: #999; padding: 2rem;">Add elements or upload your photo to begin</p>
+                    </div>
+
+                    <div class="upload-section">
+                        <p class="option-label">Upload Your Photo</p>
+                        <label class="upload-label">
+                            <input type="file" accept="image/*" onchange="handleImageUpload(event)">
+                            📷 Choose Photo
+                        </label>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--charcoal);">Upload a photo and I'll create a custom sticker from it!</p>
+                    </div>
+
+                    <div class="charm-section">
+                        <p class="option-label">Add Coastal Elements</p>
+                        <div class="charm-options">
+                            <button class="charm-btn" onclick="addStickerEmoji('🌊')">🌊</button>
+                            <button class="charm-btn" onclick="addStickerEmoji('🐚')">🐚</button>
+                            <button class="charm-btn" onclick="addStickerEmoji('🦋')">🦋</button>
+                            <button class="charm-btn" onclick="addStickerEmoji('🌸')">🌸</button>
+                            <button class="charm-btn" onclick="addStickerEmoji('⭐')">⭐</button>
+                            <button class="charm-btn" onclick="addStickerEmoji('☁️')">☁️</button>
+                            <button class="charm-btn" onclick="addStickerEmoji('💎')">💎</button>
+                            <button class="charm-btn" onclick="addStickerEmoji('🪸')">🪸</button>
+                        </div>
+                    </div>
+
+                    <div class="letter-input-section">
+                        <p class="option-label">Add Text</p>
+                        <input type="text" id="sticker-text-input" placeholder="Enter your text..." style="width: 300px;">
+                        <div style="margin-top: 1rem;">
+                            <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Choose text color:</p>
+                            <div style="display: flex; gap: 0.5rem; justify-content: center;">
+                                <button style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #ddd; background: #F4D4D4; cursor: pointer;" onclick="currentTextColor = '#F4D4D4'"></button>
+                                <button style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #ddd; background: #C9E4E7; cursor: pointer;" onclick="currentTextColor = '#C9E4E7'"></button>
+                                <button style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #ddd; background: #E8B4A8; cursor: pointer;" onclick="currentTextColor = '#E8B4A8'"></button>
+                                <button style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #ddd; background: #9C8577; cursor: pointer;" onclick="currentTextColor = '#9C8577'"></button>
+                                <button style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #ddd; background: #8DB4C7; cursor: pointer;" onclick="currentTextColor = '#8DB4C7'"></button>
+                            </div>
+                        </div>
+                        <button class="btn-primary" onclick="addStickerText()" style="padding: 1rem 2rem; margin-top: 1rem;">Add Text</button>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center;">
+                        <button class="btn-secondary" onclick="clearStickerDesign()">Clear Design</button>
+                        <button class="btn-primary" onclick="saveStickerDesign()" style="padding: 1rem 3rem;">Save & Add to Cart ($10)</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Reveal Section -->
+        <section class="game-reveal">
+            <h3>Take a Break & Play!</h3>
+            <p>Match pairs of coastal items in this relaxing memory game</p>
+            <button class="cta-button" onclick="revealGame()">Play Mini-Game</button>
+            
+            <div id="game-container" class="game-container">
+                <div class="game-board" id="game-board"></div>
+                <div class="game-stats">
+                    <div>Moves: <span id="game-moves">0</span></div>
+                    <div>Matches: <span id="game-matches">0</span></div>
+                </div>
+                <button class="btn-primary" onclick="resetMemoryGame()" style="margin-top: 2rem; padding: 1rem 2rem;">New Game</button>
+            </div>
+        </section>
+
+        <!-- Donation Section -->
+        <section id="donate" class="donation-section">
+            <div class="donation-content">
+                <h2>Support My Creative Journey</h2>
+                <p>Every donation helps me purchase quality materials and continue creating beautiful handmade pieces. Your support means the world to me!</p>
+                
+                <div class="donation-amounts">
+                    <button class="amount-option" onclick="selectDonationAmount(5)">$5</button>
+                    <button class="amount-option" onclick="selectDonationAmount(10)">$10</button>
+                    <button class="amount-option" onclick="selectDonationAmount(25)">$25</button>
+                    <button class="amount-option" onclick="selectDonationAmount(50)">$50</button>
+                </div>
+                
+                <div class="custom-donation-input">
+                    <input type="number" id="custom-donation-amount" placeholder="Custom amount">
+                </div>
+                
+                <button class="cta-button" onclick="processDonation()">Donate Now</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Summary -->
+    <div id="cart-summary" class="cart-summary">
+        <div class="cart-header">Your Cart</div>
+        <div id="cart-items-list"></div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-amount">$0</span>
+        </div>
+        <button class="btn-primary" onclick="checkout()" style="width: 100%;">Checkout</button>
+    </div>
+
+    <!-- Gift Modal -->
+    <div id="gift-modal" class="modal">
+        <div class="modal-content">
+            <h3>Send as a Gift</h3>
+            <div class="form-group">
+                <label>Recipient's Name</label>
+                <input type="text" id="gift-recipient-name" placeholder="Who is this for?">
+            </div>
+            <div class="form-group">
+                <label>Recipient's Email (optional)</label>
+                <input type="email" id="gift-recipient-email" placeholder="their@email.com">
+            </div>
+            <div class="form-group">
+                <label>Gift Message</label>
+                <textarea id="gift-message" rows="3" placeholder="Add a personal message..."></textarea>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-secondary" onclick="closeGiftModal()">Cancel</button>
+                <button class="btn-primary" onclick="addGiftToCart()">Add Gift to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 1rem;">COASTAL CLAY CO.</p>
+            <p>Handcrafted with love by a 12-year-old creator</p>
+            <p>Inspired by windswept walks on Rehoboth Beach & Ocean City</p>
+            <p style="margin-top: 1rem;">📧 coastalclay@example.com</p>
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">© 2025 Coastal Clay Co. All pieces made with care.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Shopping Cart Management
+        let cart = [];
+        let cartTotal = 0;
+        let currentGiftItem = null;
+        let selectedDonation = 0;
+        let currentTextColor = '#8DB4C7';
+
+        function addToCart(itemName, price, isGift, giftDetails = null) {
+            cart.push({
+                name: itemName,
+                price: price,
+                isGift: isGift,
+                giftDetails: giftDetails
+            });
+            cartTotal += price;
+            updateCartDisplay();
+            
+            const message = isGift ? `${itemName} added to cart as a gift!` : `${itemName} added to cart!`;
+            alert(message);
+        }
+
+        function updateCartDisplay() {
+            const cartElement = document.getElementById('cart-summary');
+            const itemsList = document.getElementById('cart-items-list');
+            const totalElement = document.getElementById('cart-total-amount');
+            
+            if (cart.length > 0) {
+                cartElement.classList.add('active');
+                itemsList.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <span>${item.name}${item.isGift ? ' 🎁' : ''}</span>
+                        <span>$${item.price}</span>
+                    </div>
+                `).join('');
+                totalElement.textContent = `$${cartTotal}`;
+            } else {
+                cartElement.classList.remove('active');
+            }
+        }
+
+        function checkout() {
+            if (cart.length === 0) return;
+            alert(`Thank you for your order of $${cartTotal}! My parents will reach out to arrange payment and shipping. 🌊`);
+            cart = [];
+            cartTotal = 0;
+            updateCartDisplay();
+        }
+
+        // Gift Modal
+        function openGiftModal(itemName, price) {
+            currentGiftItem = {name: itemName, price: price};
+            document.getElementById('gift-modal').classList.add('active');
+        }
+
+        function closeGiftModal() {
+            document.getElementById('gift-modal').classList.remove('active');
+            document.getElementById('gift-recipient-name').value = '';
+            document.getElementById('gift-recipient-email').value = '';
+            document.getElementById('gift-message').value = '';
+        }
+
+        function addGiftToCart() {
+            const recipientName = document.getElementById('gift-recipient-name').value;
+            const recipientEmail = document.getElementById('gift-recipient-email').value;
+            const message = document.getElementById('gift-message').value;
+            
+            if (!recipientName) {
+                alert('Please enter the recipient\'s name');
+                return;
+            }
+            
+            addToCart(currentGiftItem.name, currentGiftItem.price, true, {
+                recipient: recipientName,
+                email: recipientEmail,
+                message: message
+            });
+            
+            closeGiftModal();
+        }
+
+        // Builder Tab Switching
+        function switchBuilderTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.builder-content').forEach(content => content.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(`${tab}-builder`).classList.add('active');
+        }
+
+        // Bracelet Builder
+        let braceletBeads = [];
+
+        function addClayBead(color, content = '') {
+            const display = document.getElementById('bracelet-display');
+            const firstP = display.querySelector('p');
+            if (firstP) firstP.remove();
+            
+            const bead = document.createElement('div');
+            bead.className = 'clay-bead';
+            bead.style.background = color !== 'transparent' ? `linear-gradient(145deg, ${color}, ${adjustColor(color, -20)})` : 'transparent';
+            bead.textContent = content;
+            bead.onclick = function() {
+                this.remove();
+                braceletBeads = braceletBeads.filter(b => b !== bead);
+            };
+            
+            display.appendChild(bead);
+            braceletBeads.push(bead);
+        }
+
+        function adjustColor(color, amount) {
+            return '#' + color.replace(/^#/, '').replace(/../g, color => 
+                ('0' + Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2)
+            );
+        }
+
+        function addLetterClayBead() {
+            const input = document.getElementById('letter-bead-input');
+            const letter = input.value.toUpperCase();
+            if (letter) {
+                addClayBead('#FFFCF9', letter);
+                input.value = '';
+            }
+        }
+
+        function clearBraceletBuilder() {
+            const display = document.getElementById('bracelet-display');
+            display.innerHTML = '<p style="color: #999;">Select clay beads below to begin designing</p>';
+            braceletBeads = [];
+        }
+
+        function saveBraceletDesign() {
+            if (braceletBeads.length === 0) {
+                alert('Please add some beads to your bracelet design first!');
+                return;
+            }
+            addToCart('Custom Bracelet Design', 15, false);
+            alert('Your custom bracelet design has been saved! I\'ll handcraft it especially for you. 🌊');
+            clearBraceletBuilder();
+        }
+
+        // Sticker Builder
+        let stickerElements = [];
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const canvas = document.getElementById('sticker-canvas');
+                const firstP = canvas.querySelector('p');
+                if (firstP) firstP.remove();
+                
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.className = 'uploaded-image sticker-element';
+                img.style.width = '300px';
+                img.style.height = 'auto';
+                img.style.left = '100px';
+                img.style.top = '100px';
+                
+                makeDraggable(img);
+                img.ondblclick = function() { this.remove(); };
+                
+                canvas.appendChild(img);
+                stickerElements.push(img);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function addStickerEmoji(emoji) {
+            const canvas = document.getElementById('sticker-canvas');
+            const firstP = canvas.querySelector('p');
+            if (firstP) firstP.remove();
+            
+            const element = document.createElement('div');
+            element.className = 'sticker-element';
+            element.textContent = emoji;
+            element.style.left = Math.random() * 350 + 'px';
+            element.style.top = Math.random() * 350 + 'px';
+            
+            makeDraggable(element);
+            element.ondblclick = function() { this.remove(); };
+            
+            canvas.appendChild(element);
+            stickerElements.push(element);
+        }
+
+        function addStickerText() {
+            const input = document.getElementById('sticker-text-input');
+            const text = input.value;
+            if (!text) return;
+            
+            const canvas = document.getElementById('sticker-canvas');
+            const firstP = canvas.querySelector('p');
+            if (firstP) firstP.remove();
+            
+            const textElement = document.createElement('div');
+            textElement.className = 'sticker-element sticker-text';
+            textElement.textContent = text;
+            textElement.style.color = currentTextColor;
+            textElement.style.left = '100px';
+            textElement.style.top = '200px';
+            
+            makeDraggable(textElement);
+            textElement.ondblclick = function() { this.remove(); };
+            
+            canvas.appendChild(textElement);
+            stickerElements.push(textElement);
+            input.value = '';
+        }
+
+        function makeDraggable(element) {
+            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            element.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                element.style.top = (element.offsetTop - pos2) + "px";
+                element.style.left = (element.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+
+        function clearStickerDesign() {
+            const canvas = document.getElementById('sticker-canvas');
+            canvas.innerHTML = '<p style="color: #999; padding: 2rem;">Add elements or upload your photo to begin</p>';
+            stickerElements = [];
+        }
+
+        function saveStickerDesign() {
+            if (stickerElements.length === 0) {
+                alert('Please add some elements or upload a photo first!');
+                return;
+            }
+            addToCart('Custom Sticker Design', 10, false);
+            alert('Your custom sticker design has been saved! I\'ll create it for you. 🌊');
+            clearStickerDesign();
+        }
+
+        // Memory Game
+        const gameIcons = ['🌊', '🐚', '⭐', '🦋', '🌸', '💎', '☁️', '🪸'];
+        let gameCards = [];
+        let flippedGameCards = [];
+        let gameMoves = 0;
+        let gameMatches = 0;
+
+        function revealGame() {
+            document.getElementById('game-container').classList.add('active');
+            initMemoryGame();
+            event.target.style.display = 'none';
+        }
+
+        function initMemoryGame() {
+            const board = document.getElementById('game-board');
+            board.innerHTML = '';
+            gameCards = [...gameIcons, ...gameIcons].sort(() => Math.random() - 0.5);
+            gameMoves = 0;
+            gameMatches = 0;
+            flippedGameCards = [];
+            
+            document.getElementById('game-moves').textContent = '0';
+            document.getElementById('game-matches').textContent = '0';
+            
+            gameCards.forEach((icon, index) => {
+                const card = document.createElement('div');
+                card.className = 'game-card';
+                card.innerHTML = `
+                    <div class="card-front">${icon}</div>
+                    <div class="card-back">~</div>
+                `;
+                card.onclick = () => flipGameCard(card, icon, index);
+                board.appendChild(card);
+            });
+        }
+
+        function flipGameCard(card, icon, index) {
+            if (flippedGameCards.length === 2 || card.classList.contains('flipped')) return;
+            
+            card.classList.add('flipped');
+            flippedGameCards.push({card, icon, index});
+            
+            if (flippedGameCards.length === 2) {
+                gameMoves++;
+                document.getElementById('game-moves').textContent = gameMoves;
+                
+                setTimeout(() => {
+                    if (flippedGameCards[0].icon === flippedGameCards[1].icon && 
+                        flippedGameCards[0].index !== flippedGameCards[1].index) {
+                        flippedGameCards[0].card.classList.add('matched');
+                        flippedGameCards[1].card.classList.add('matched');
+                        gameMatches++;
+                        document.getElementById('game-matches').textContent = gameMatches;
+                        
+                        if (gameMatches === gameIcons.length) {
+                            setTimeout(() => alert(`🌊 Congratulations! You matched all pairs in ${gameMoves} moves!`), 500);
+                        }
+                    } else {
+                        flippedGameCards[0].card.classList.remove('flipped');
+                        flippedGameCards[1].card.classList.remove('flipped');
+                    }
+                    flippedGameCards = [];
+                }, 1000);
+            }
+        }
+
+        function resetMemoryGame() {
+            initMemoryGame();
+        }
+
+        // Donation
+        function selectDonationAmount(amount) {
+            selectedDonation = amount;
+            document.querySelectorAll('.amount-option').forEach(btn => btn.classList.remove('selected'));
+            event.target.classList.add('selected');
+            document.getElementById('custom-donation-amount').value = '';
+        }
+
+        function processDonation() {
+            const customAmount = document.getElementById('custom-donation-amount').value;
+            const amount = customAmount || selectedDonation;
+            
+            if (!amount || amount <= 0) {
+                alert('Please select or enter a donation amount');
+                return;
+            }
+            
+            alert(`🌊 Thank you so much for your generous donation of $${amount}! Your support helps me continue creating beautiful handcrafted pieces. You're amazing!`);
+            selectedDonation = 0;
+            document.querySelectorAll('.amount-option').forEach(btn => btn.classList.remove('selected'));
+            document.getElementById('custom-donation-amount').value = '';
+        }
+    </script>
+</body>
+</html>
